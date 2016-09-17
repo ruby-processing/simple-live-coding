@@ -7,8 +7,7 @@ Get inspired by [Bret Victor][worrydream] and / or by [Sam Aaron][sonic-pi] or j
 
 ![drawing from a 6 year old girl](http://i43.tinypic.com/15n8x9v.jpg)
 
-This drawing was made from a 6 year old girl at the CoderDojo cologne...
-
+This drawing was made from a 6 year old girl at the CoderDojo cologne (_with Marcel Belledin original_)...
 
 With "ellipse 50, 50, 80, 80" or "rect/line/fill" you can draw and with mouse dragging change the values.
 

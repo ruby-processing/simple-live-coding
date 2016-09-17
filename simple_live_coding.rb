@@ -15,6 +15,7 @@ class RubyDraw < Propane::App
 
   def settings
     size 700, 600 # access with width
+    pixel_density(display_density) # set hidpi if required?
     # smooth
   end
 

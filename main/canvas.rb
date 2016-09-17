@@ -1,5 +1,6 @@
 class Canvas
-include Processing::Proxy
+# include Processing::Proxy
+include Propane::Proxy
 
   def initialize(lines)
     @lines = lines

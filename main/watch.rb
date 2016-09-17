@@ -1,4 +1,5 @@
 class Watch
+  include Propane::Proxy
   def initialize(lines, description, cursor)
     @lines = lines
     @description = description
@@ -6,7 +7,7 @@ class Watch
   end
 
   def check_line(x, y)
-    if x > ($app.width/2) + $app.editor_left_margin
+    if x > (width / 2) + editor_left_margin
       if @lines.positiontable(y) == :undefined
         @description.position = [-50] # set it outside the view field
       else
@@ -15,16 +16,15 @@ class Watch
     end
   end
 
-
-  def check_param(x,y)
+  def check_param(x, y)
     y_position = @cursor.y_position
     string_object = @lines.positiontable(y_position)
-    if (string_object.position[0]).include?($app.pressed[1])
-      string_object.update_param(x,y) unless string_object == :undefined
+    if (string_object.position[0]).include?(pressed[1])
+      string_object.update_param(x, y) unless string_object == :undefined
     end
   end
 
-  def get_param(x,y)
+  def get_param(x, y)
     y_position = @cursor.y_position
     string_object = @lines.positiontable(y_position)
     string_object.get_param_values unless string_object == :undefined

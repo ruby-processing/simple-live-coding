@@ -1,5 +1,6 @@
 class Cursor
-include Processing::Proxy
+# include Processing::Proxy
+include Propane::Proxy
 
   def initialize(line)
     @line = line
